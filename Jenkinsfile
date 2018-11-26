@@ -1,15 +1,18 @@
 pipeline {
     agent {
          docker { 
-		image 'maven:3-alpine'
-		args '-v $HOME/.m2:/root/.m2'
+		image 'nginx:alpine'
+		args '-v /root/wmj:/usr/share/nginx/html'
          }
 
     }
     stages {
 	stage('Build') {
+		steps {
+			sh 'apk add --no-cache curl openssl'
+		}
         	steps {
-			sh 'mvn -B'
+			sh 'curl localhost/abc.html'
 		}
 	}
     }
