@@ -11,6 +11,8 @@ pipeline {
 		steps {
 			sh 'apk add --no-cache curl openssl'
 		}
+	}
+        stage('Test') {
         	steps {
 			sh 'curl localhost/abc.html'
 		}
