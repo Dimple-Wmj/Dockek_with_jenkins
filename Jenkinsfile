@@ -5,7 +5,7 @@ pipeline {
     stages {
 	stage('Test') {
 		steps {
-			sh 'ps -elf | grep nginx'
+			sh 'ls'
 	     	}
 	}
 	}
