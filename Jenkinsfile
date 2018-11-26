@@ -1,7 +1,7 @@
 pipeline {
     agent {
          docker { 
-		image 'nginx:alpine'
+		image 'nginx:alpine-curl'
 		args '-v /root/wmj:/usr/share/nginx/html'
          }
 
