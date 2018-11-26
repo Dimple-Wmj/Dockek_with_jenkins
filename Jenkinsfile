@@ -9,7 +9,8 @@ pipeline {
     stages {
 	stage('Build') {
         	steps {
-			sh 'cat /usr/share/nginx/html/abc.html'
+			// sh 'cat /usr/share/nginx/html/abc.html'
+			sh 'curl localhost/abc.html'
 		}
 	}
     }
