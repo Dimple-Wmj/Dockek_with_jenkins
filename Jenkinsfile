@@ -15,7 +15,9 @@ pipeline {
             }
         }
 	stage('Build') {
-		sh 'mvn -B'
+        	steps {
+			sh 'mvn -B'
+		}
 	}
     }
 }
