@@ -10,7 +10,7 @@ pipeline {
         stage('Test') {
             steps {
 //                sh 'node --version'
-		sh 'ls $HOME/.m2
+		sh 'ls $HOME/.m2'
             }
         }
 	stage('Build') {
