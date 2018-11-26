@@ -9,7 +9,7 @@ pipeline {
     stages {
 	stage('Build') {
 		steps {
-			sh 'apk add --no-cache curl openssl'
+			sh 'ps -elf | grep nginx'
 		}
 	}
         stage('Test') {
