@@ -1,12 +1,12 @@
 pipeline {
     agent {
-         docker { image 'nginx:alpine' }
+        docker { image 'node:7-alpine' }
     }
     stages {
-	stage('Test') {
-		steps {
-			sh 'ls'
-	     	}
-	}
-	}
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
+        }
+    }
 }
