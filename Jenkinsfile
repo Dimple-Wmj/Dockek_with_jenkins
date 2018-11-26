@@ -9,7 +9,7 @@ pipeline {
     stages {
 	stage('Build') {
         	steps {
-			sh 'curl localhost/abc.html'
+			sh 'cat /usr/share/nginx/html/abc.html'
 		}
 	}
     }
